@@ -103,6 +103,7 @@ h1, h1 span, h2, h2 span {
 /* GRADIENT */
 
 .gradient {
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -290,14 +291,14 @@ h1, h1 span, h2, h2 span {
 
 
 /* FOOTER SECTION */
-/* SIGN UP SECTION */
+
+/* Signup Section */
 .signup {
   background: #1a1a1a;
   color: #1a1a1a;
   padding: 60px 20px;
   position: relative;
 }
-
 
 .signup-content {
   display: flex;
@@ -307,10 +308,10 @@ h1, h1 span, h2, h2 span {
 }
 
 .signup-header {
-  color: white;
-  font-size: 48px;
+  color: #fff;
+  font-size: 42px;
   line-height: 1.2;
-  margin-top: -210px;
+  margin-top: -200px;
   text-align: left;
   padding: 15px;
   margin-left: 50px;
@@ -411,7 +412,7 @@ h1, h1 span, h2, h2 span {
   background: #ff3333;
 }
 
-/* COMPANY INFO SECTION */
+/* Company Info Section */
 .company-info {
   background-color: transparent;
   padding: 20px 20px;
@@ -509,7 +510,7 @@ h1, h1 span, h2, h2 span {
 }
 
 .legal-links a {
-  color: #ddd;
+  color: white;
   text-decoration: none;
   font-size: 14px;
   margin-left: 30px;
@@ -592,7 +593,258 @@ h1, h1 span, h2, h2 span {
     color: #f5f5f5;
   }
 
+  .location-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .close-icon.show {
     display: block;
+  }
+}
+
+@media (max-width: 1440px) {
+  .signup {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .signup {
+    margin-top: 50px;
+  }
+
+  .signup-header {
+    margin-top: -180px;
+    font-size: 25px;
+  }
+
+  .company-info nav {
+    margin-left: 35px;
+  }
+  .footer-bottom {
+    gap: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .signup-header {
+    font-size: 40px;
+  }
+  
+  .white {
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-content {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  
+  .white {
+    color: #fff;
+  }
+
+  .signup-header {
+    font-size: 32px;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .signup-container {
+    position: static;
+    margin: 20px auto;
+    margin-bottom: 100px;
+  }
+
+  .signup-container::before {
+    position: relative;
+  }
+
+  .signup-container::after {
+    position: relative;
+  }
+
+  .company-info {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-info nav {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-form {
+    max-width: 100%;
+  }
+
+  
+  .white {
+    color: #fff;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .legal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .legal-links a {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-header {
+    font-size: 28px;
+  }
+
+  
+  .white {
+    color: #fff;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .company-logo {
+    height: 50px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .company-details {
+    font-size: 14px;
+  }
+  
+  .white {
+    color: #fff;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  .signup-header {
+    font-size: 24px;
+  }
+
+  .signup {
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .signup-container {
+    background: none;
+  }
+
+  .signup-form {
+    width: 100%;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .company-logo {
+    height: 40px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  .company-details {
+    font-size: 14px;
+  }
+
+  .white {
+    color: #fff;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  .signup-header {
+    font-size: 24px;
+  }
+
+  .signup {
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .signup-container {
+    background: none;
+  }
+
+  .signup-form {
+    width: 80%;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .company-logo {
+    height: 40px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
   }
 }
