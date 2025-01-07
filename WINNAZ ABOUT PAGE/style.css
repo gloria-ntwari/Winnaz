@@ -17,9 +17,11 @@ body {
 }
 
 h1,
+h2,
 h1 span,
 h2 span {
   font-family: "Harabara", sans-serif;
+  font-weight: 500;
 }
 
 .navbar {
@@ -176,7 +178,6 @@ h2 span {
   color: #ff8c00;
   font-size: 14px;
   margin-bottom: 20px;
-  display: flex;
   align-items: center;
   gap: 8px;
 }
@@ -201,7 +202,7 @@ h2 span {
 .story-content {
   display: flex;
   gap: 40px;
-  /* align-items: center; */
+  align-items: center;
   margin-bottom: 60px;
 }
 
@@ -245,8 +246,8 @@ h2 span {
 }
 
 .team-images img {
-  width: 664px;
-  height: 659px;
+  width: 564px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -359,13 +360,14 @@ h2 span {
 
 .impact-section {
   position: relative;
-  padding: 50px 100px;
-  color:black;
+  padding-left: 100px;
+  color: black;
   font-size: 16px;
   margin-bottom: 20px;
   display: flex;
   height: 100%;
   width: 100%;
+  align-items: center;
   display: grid;
   grid-template-columns: 1fr 550px;
   gap: 40px;
@@ -373,10 +375,10 @@ h2 span {
 }
 
 /* .content { */
-  .content p {
-    margin-bottom: 24px;
-    font-size: 16px;
-    line-height: 1.8;
+.content p {
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 .impact-icon::before {
@@ -385,10 +387,8 @@ h2 span {
   width: 24px;
   height: 24px;
   background: #ff8a00;
-  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3L16.293 6.293L9.293 13.293L10.707 14.707L17.707 7.707L21 11V3H13Z"/></svg>')
-    no-repeat 50% 50%;
-  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3L16.293 6.293L9.293 13.293L10.707 14.707L17.707 7.707L21 11V3H13Z"/></svg>')
-    no-repeat 50% 50%;
+  mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3L16.293 6.293L9.293 13.293L10.707 14.707L17.707 7.707L21 11V3H13Z"/></svg>') no-repeat 50% 50%;
+  -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 3L16.293 6.293L9.293 13.293L10.707 14.707L17.707 7.707L21 11V3H13Z"/></svg>') no-repeat 50% 50%;
 }
 
 .title {
@@ -423,90 +423,173 @@ h2 span {
   transition: background-color 0.3s;
 }
 
+.download-btn i {
+  font-size: 25px;
+  font-weight: 100;
+}
+
 .download-btn:hover {
   background: #e67a00;
 }
 
 
 .images-container {
-  display: flex;
-  flex-direction: column;
- }
- .images-container div {
-  gap: 20px;
- }
-
-.impact-icon {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  width: 550px;
+  position: relative;
+  height: 1200px;
+  margin-left: auto;
 }
-
 
 .impact-image {
   position: absolute;
-  width: 100%;
-  height: 150px;
+  right: 0;
   overflow: hidden;
-  border-top-left-radius: 48%;
-  border-bottom-left-radius: 48%;
-  
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
 }
 
 .impact-image img {
-  width: 500px;
+  width: 100%;
   height: auto;
   object-fit: cover;
 }
 
+/* Image Positions and Sizes */
 .impact-image:nth-child(1) {
-  top: 195px;
-  right: 0;
   width: 350px;
   height: 150px;
+  top: 0;
 }
 
 .impact-image:nth-child(2) {
-  top: 350px;
-  right: 0px;
   width: 450px;
   height: 200px;
+  top: 170px;
 }
 
 .impact-image:nth-child(3) {
-  top: 555px;
-  right: 0;
   width: 550px;
   height: 300px;
+  top: 390px;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
 }
 
 .impact-image:nth-child(4) {
-  top: 860px; 
-  right: 0px;
   width: 450px;
   height: 200px;
+  top: 710px;
 }
 
 .impact-image:nth-child(5) {
-  bottom: 210px;
-  right: 0;
   width: 350px;
   height: 150px;
+  top: 930px;
+}
+/* Responsive Breakpoints */
+
+@media (max-width: 1200px) {
+  .images-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .impact-image:nth-child(1) {
+    width: 320px;
+    height: 140px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .impact-image:nth-child(2) {
+    width: 410px;
+    height: 180px;
+    top: 160px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .impact-image:nth-child(3) {
+    width: 500px;
+    height: 270px;
+    top: 360px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .impact-image:nth-child(4) {
+    width: 410px;
+    height: 180px;
+    top: 650px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .impact-image:nth-child(5) {
+    width: 320px;
+    height: 140px;
+    top: 850px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
 }
 
-
 @media (max-width: 1024px) {
-  .impact-section {
+  .impact-container {
     flex-direction: column;
   }
 
-  .content {
-    max-width: 100%;
+  .images-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .images-container {
-    height: 600px;
+  .impact-image {
+    position: static;
+    width: calc(50% - 10px) !important;
+    height: 200px !important;
+    border-radius: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .impact-image {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .impact-image {
+    height: 180px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .impact-image {
+    height: 150px !important;
+  }
+
+  .download-button {
+    padding: 12px 24px;
+    font-size: 14px;
   }
 }
 
@@ -517,6 +600,7 @@ h2 span {
   padding: 60px 20px;
   position: relative;
 }
+
 .signup-content {
   display: flex;
   background-color: #1a1a1a;
@@ -525,16 +609,17 @@ h2 span {
 }
 
 .signup-header {
-  color: #000;
-  font-size: 48px;
+  color: #fff;
+  font-size: 42px;
   line-height: 1.2;
-  margin-top: -210px;
+  margin-top: -200px;
   text-align: left;
   padding: 15px;
   margin-left: 50px;
 }
-.white{
-  color: white;
+
+.white {
+  color: #1a1a1a;
 }
 
 .gold {
@@ -627,6 +712,7 @@ h2 span {
 .signup-form button:hover {
   background: #ff3333;
 }
+
 /* Company Info Section */
 .company-info {
   background-color: transparent;
@@ -698,6 +784,10 @@ h2 span {
   border-top: 3px solid rgba(255, 255, 255, 0.323);
 }
 
+.footer-bottom p {
+  color: #ddd;
+}
+
 .social-icons {
   display: flex;
   gap: 10px;
@@ -727,14 +817,133 @@ h2 span {
   margin-left: 30px;
 }
 
-@media (max-width: 1024px) {
+/* Responsive styles for all sections */
+
+@media (max-width: 1440px) {
+  .signup {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+
+  .hero-title {
+    font-size: 3.5em;
+  }
+
+  .section {
+    padding: 40px 15px;
+  }
+
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .partners-grid {
+    gap: 60px;
+  }
+
+  .impact-section {
+    padding: 40px 80px;
+    grid-template-columns: 1fr 450px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 3em;
+  }
+
+  .story-content,
+  .team-section {
+    flex-direction: column;
+  }
+
+  .image-stack,
+  .team-images {
+    min-height: 350px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .partners-grid {
+    gap: 50px;
+  }
+
+  .impact-section {
+    grid-template-columns: 1fr;
+    padding: 40px 60px;
+  }
+
+  .impact-image {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .impact-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .signup {
+    margin-top: 50px;
+  }
+
+  .signup-header {
+    margin-top: -180px;
+    font-size: 25px;
+  }
+
+  .company-info nav {
+    margin-left: 35px;
+  }
+  .footer-bottom {
+    gap: 0;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .nav-link {
+    gap: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1em;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partners-grid {
+    gap: 40px;
+  }
+
+  .signup-header {
+    font-size: 40px;
+  }
+  
+  .white {
+    color: #fff;
   }
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-link {
     display: none;
   }
 
@@ -742,31 +951,105 @@ h2 span {
     font-size: 2.5em;
   }
 
-  .content,
+  .hero-subtitle {
+    font-size: 1em;
+  }
+
+  .floating-product {
+    width: 40px;
+    height: 40px;
+  }
+
+  .story-content,
   .team-section {
-    flex-direction: column;
+    gap: 30px;
   }
 
-  .image-stack,
-  .team-images {
-    min-height: 300px;
-  }
-
-  .team-text {
-    text-align: left;
+  .image-stack img,
+  .team-images img {
+    width: 100%;
+    height: auto;
   }
 
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
 
-  .section-title {
-    font-size: 36px;
+  .partners-grid {
+    gap: 30px;
   }
 
-  .section-description {
-    font-size: 16px;
-    padding: 0 20px;
+  .partner-logo {
+    height: 60px;
+  }
+
+  .impact-section {
+    padding: 30px 40px;
+  }
+
+  .signup-content {
+    flex-direction: column;
+    padding: 60px 20px;
+  }
+
+  
+  .white {
+    color: #fff;
+  }
+
+  .signup-header {
+    font-size: 32px;
+    margin-left: 0;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .signup-container {
+    position: static;
+    margin: 20px auto;
+    margin-bottom: 100px;
+  }
+
+  .signup-container::before {
+    position: relative;
+  }
+
+  .signup-container::after {
+    position: relative;
+  }
+
+  .company-info {
+    flex-direction: column;
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .company-info nav {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .social-icons {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
   }
 
   .partners-grid {
@@ -774,12 +1057,242 @@ h2 span {
   }
 
   .partner-logo {
-    height: 60px;
+    height: 50px;
+  }
+
+  .impact-section {
+    padding: 30px 20px;
+  }
+
+  .images-container {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-form {
+    max-width: 100%;
+  }
+
+  
+  .white {
+    color: #fff;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .legal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .legal-links a {
+    margin-left: 0;
   }
 }
 
 @media (max-width: 480px) {
-  .team-grid {
-    grid-template-columns: 1fr;
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .buy-button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .hero-title {
+    font-size: 1.8em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9em;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .floating-product {
+    width: 30px;
+    height: 30px;
+  }
+
+  .chips-image {
+    width: 120px;
+  }
+
+  .team-card {
+    padding: 15px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .signup-header {
+    font-size: 28px;
+  }
+
+  
+  .white {
+    color: #fff;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .company-logo {
+    height: 50px;
+  }
+
+  .social-icons a {
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 375px) {
+  .company-details {
+    font-size: 14px;
+  }
+  
+  .white {
+    color: #fff;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  .signup-header {
+    font-size: 24px;
+  }
+
+  .signup {
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .signup-container {
+    background: none;
+  }
+
+  .signup-form {
+    width: 100%;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .company-logo {
+    height: 40px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.5em;
+  }
+
+  .hero-subtitle {
+    font-size: 0.8em;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .floating-product {
+    width: 25px;
+    height: 25px;
+  }
+
+  .chips-image {
+    width: 100px;
+  }
+
+  .team-card {
+    padding: 10px;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .company-details {
+    font-size: 14px;
+  }
+
+  .white {
+    color: #fff;
+  }
+
+  .nav-links {
+    font-size: 12px;
+  }
+
+  .signup-header {
+    font-size: 24px;
+  }
+
+  .signup {
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  .signup-container {
+    background: none;
+  }
+
+  .signup-form {
+    width: 80%;
+  }
+
+  .signup-form input,
+  .signup-form button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .company-logo {
+    height: 40px;
+  }
+
+  .footer-bottom {
+    font-size: 13px;
+  }
+
+  .social-icons a {
+    font-size: 14px;
+    width: 22px;
+    height: 22px;
   }
 }
