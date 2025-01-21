@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const menuIcon = document.querySelector('.menu-icon');
   const closeIcon = document.querySelector('.close-icon');
-  const navLinks = document.querySelector('.nav-links');
+  const navLinks = document.querySelector('.nav-link');
 
   function toggleMenu() {
     navLinks.classList.toggle('show');
