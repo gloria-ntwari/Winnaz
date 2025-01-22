@@ -28,6 +28,7 @@ h1 span,
 h2,
 h2 span {
   font-family: "Harabara", sans-serif;
+  font-weight: 500;
 }
 
 /* Navigation Styles */
@@ -145,7 +146,7 @@ h2 span {
   width: 600px;
   line-height: 1.1;
   color: var(--text-dark);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .flavors {
@@ -213,6 +214,17 @@ h2 span {
   inset: 0;
   background: url(asset/umugongo\ $$2$$.png);
 }
+
+.dropdown {
+  text-align: center;
+  margin-top: -25px;
+  margin-bottom: 25px;
+}
+
+.dropdown img {
+  width: 38px;
+}
+
 
 .slider {
   position: relative;
@@ -408,6 +420,27 @@ h2 span {
   max-width: 600px;
   position: relative;
   padding: 0 60px;
+}
+
+
+.crisps-1 {
+  position: absolute;
+  top: -110px;
+  left: 5%; 
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.crisps-2 {
+  position: absolute;
+  bottom: -110px;
+  right: -10%; 
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.crisps-1 img, .crisps-2 img {
+  width: 190px;
 }
 
 .testimonial {
@@ -774,8 +807,9 @@ h2 span {
 }
 
 /* Responsive Breakpoints */
+
 /* Mobile (XS) */
-@media (max-width: 320px) {
+@media ( (min-width: 320px) and (max-width: 375px)) {
   .hero {
     display: block;
     min-height: 150vh;
@@ -890,13 +924,17 @@ h2 span {
     padding: 0 20px;
   }
 
+  .crisps-1 img, .crisps-2 img {
+    display: none;
+  }
+
   .quote-marks {
     font-size: 4rem;
   }
 }
 
 /* Tablet (SM) */
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
   .content-testmonial {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -916,6 +954,11 @@ h2 span {
     width: 100px;
     height: 100px;
   }
+
+  .crisps-1 img, .crisps-2 img {
+    display: none;
+  }
+
 }
 
 /* Small Desktop (MD) */
