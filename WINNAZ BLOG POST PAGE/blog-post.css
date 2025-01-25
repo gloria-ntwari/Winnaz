@@ -211,6 +211,17 @@ h2 {
   padding: 60px 20px;
   position: relative;
 }
+
+.signup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(Frame\ 1618873031.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .signup-content {
   display: flex;
   background-color: #1a1a1a;
