@@ -16,6 +16,14 @@ body {
   overflow-x: hidden;
 }
 
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(Group\ \(1\).png);
+}
+
+
 h1,
 h2,
 h1 span,

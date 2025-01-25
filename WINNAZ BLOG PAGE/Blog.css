@@ -83,6 +83,14 @@ h2 span {
   align-items: center;
 }
 
+.main-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url(Hero-umugogo.png);
+}
+
+
 .main-hero-content {
   padding: 0 5%;
   max-width: 1400px;
