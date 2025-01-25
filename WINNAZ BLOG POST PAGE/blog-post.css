@@ -16,6 +16,13 @@ h2 {
   font-family: "Sora", sans-serif;
 }
 
+
+h2,
+h2 span {
+  font-family: "Harabara", sans-serif;
+  font-weight: 500;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -230,15 +237,16 @@ h2 {
 }
 
 .signup-header {
-  color: #ffffff;
-  font-size: 48px;
+  color: #fff;
+  font-size: 42px;
   line-height: 1.2;
-  margin-top: -210px;
+  margin-top: -200px;
   text-align: left;
   padding: 15px;
   margin-left: 50px;
 }
-.white{
+
+.white {
   color: #1a1a1a;
 }
 
@@ -270,7 +278,7 @@ h2 {
   content: "";
   height: 30px;
   width: 30px;
-  background: transparent;
+  background: #fff;
   bottom: 0;
   margin-bottom: 10px;
   left: -30px;
@@ -284,7 +292,7 @@ h2 {
   content: "";
   height: 30px;
   width: 30px;
-  background:transparent;
+  background: #fff;
   bottom: 0;
   margin-bottom: 10px;
   right: -30px;
@@ -332,6 +340,7 @@ h2 {
 .signup-form button:hover {
   background: #ff3333;
 }
+
 /* Company Info Section */
 .company-info {
   background-color: transparent;
@@ -403,8 +412,8 @@ h2 {
   border-top: 3px solid rgba(255, 255, 255, 0.323);
 }
 
-.footer-bottom p{
-  color: #fff;
+.footer-bottom p {
+  color: #ddd;
 }
 
 .social-icons {
@@ -434,6 +443,14 @@ h2 {
   text-decoration: none;
   font-size: 14px;
   margin-left: 30px;
+}
+
+/* Responsive styles for all sections */
+
+@media (max-width: 1440px) {
+  .signup {
+    margin-top: 120px;
+  }
 }
 
 @media (max-width: 1024px) {
