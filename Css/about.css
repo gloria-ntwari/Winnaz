@@ -10,11 +10,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Sora", sans-serif;
+  text-transform: none;
 }
 
 body {
   overflow-x: hidden;
 }
+
+body, h1, h2, h3, h4, h5, h6, a, p, span, div, button, input, label {
+  text-transform: none !important;
+}
+
 
 body::before {
   content: "";
@@ -328,6 +334,16 @@ h2 span {
   margin: 0;
 }
 
+.ambassondass-title {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 35px;
+}
+
+.ambassondass-title .orange {
+  color: #ff8c00;
+}
+
 .partners-section {
   padding: 60px 20px;
   text-align: center;
@@ -637,20 +653,7 @@ h2 span {
   position: relative;
 }
 
-.signup::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('../Assets/footer-bg.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.1;
-  z-index: 1;
-}
+
 
 .signup-content {
   display: flex;
@@ -1291,6 +1294,7 @@ h2 span {
   .team-card {
     padding: 10px;
   }
+
 
   .profile-image {
     width: 80px;

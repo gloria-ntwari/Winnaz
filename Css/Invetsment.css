@@ -1007,15 +1007,7 @@ textarea.form-input {
   position: relative;
 }
 
-.signup::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(../Assets/footer-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .signup-content {
   display: flex;

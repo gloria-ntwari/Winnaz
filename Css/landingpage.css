@@ -19,7 +19,6 @@
   font-family: "Sora", sans-serif;
 }
 
-
 /* Custom properties */
 :root {
   --primary-red: #ff0000;
@@ -28,9 +27,9 @@
   --text-light: #666666;
 }
 
-
-
-
+body {
+  overflow-x: hidden;
+}
 
 /* Typography */
 h1,
@@ -160,7 +159,6 @@ h2 span {
 }
 
 .flavors {
-  color: #0066cc;
   font-weight: 500;
 }
 
@@ -208,7 +206,6 @@ h2 span {
   top: -30%;
   width: 110%;
   height: 120%;
-  background: url(../Assets/umugongo.png) center / cover no-repeat;
   background-color: #ee252a;
   padding: 4rem 1rem;
   background-position: center;
@@ -395,8 +392,8 @@ h2 span {
 }
 
 .product-1 {
-  top: -1%;
-  left: 60%;
+  top: 1%;
+  left: 67%;
   transform: translateX(-50%);
 }
 .product-2 {
@@ -408,8 +405,8 @@ h2 span {
   right: -20%;
 }
 .product-4 {
-  bottom: -15%;
-  left: 60%;
+  bottom: -16%;
+  left: 66%;
   transform: translateX(-50%);
 }
 .product-5 {
@@ -712,15 +709,6 @@ h2 span {
   position: relative;
 }
 
-.signup::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(../Assets/footer-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .signup-content {
   display: flex;
