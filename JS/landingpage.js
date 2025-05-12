@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Hero Slider Functionality
     const heroSlides = document.querySelectorAll(".main-banner .slides")
-    const heroPrevBtn = document.querySelector(".main-banner .prevs")
-    const heroNextBtn = document.querySelector(".main-banner .nexts")
     let currentHeroSlide = 0
     let isHeroAnimating = false
     let heroInterval
@@ -73,19 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300)
     }
   
-    // Event listeners for hero navigation
-    heroPrevBtn.addEventListener("click", () => {
-      stopHeroSlideShow()
-      updateHeroSlide(currentHeroSlide - 1)
-      startHeroSlideShow()
-    })
-  
-    heroNextBtn.addEventListener("click", () => {
-      stopHeroSlideShow()
-      updateHeroSlide(currentHeroSlide + 1)
-      startHeroSlideShow()
-    })
-  
     // Auto-advance hero slides
     function startHeroSlideShow() {
       stopHeroSlideShow() // Clear any existing interval
@@ -104,21 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroSection = document.querySelector(".main-banner")
     heroSection.addEventListener("mouseenter", stopHeroSlideShow)
     heroSection.addEventListener("mouseleave", startHeroSlideShow)
-  
-    // Add keyboard navigation for hero slider
-    document.addEventListener("keydown", (e) => {
-      if (!isHeroAnimating) {
-        if (e.key === "ArrowLeft") {
-          stopHeroSlideShow()
-          updateHeroSlide(currentHeroSlide - 1)
-          startHeroSlideShow()
-        } else if (e.key === "ArrowRight") {
-          stopHeroSlideShow()
-          updateHeroSlide(currentHeroSlide + 1)
-          startHeroSlideShow()
-        }
-      }
-    })
   
     // Initialize hero slider
     fadeInHero(heroSlides[0])
@@ -302,5 +272,4 @@ document.addEventListener("DOMContentLoaded", () => {
       interval = setInterval(nextTestimonial, 5000)
     })
   })
-  
-  
+

@@ -172,19 +172,6 @@ h2 {
   line-height: 1.2;
 }
 
-.distributor-button {
-  background-color: var(--primary-red);
-  color: var(--text-light);
-  border: none;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 18px;
-  margin-top: 30px;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
 
 /* Curved Top */
 .curved-top {
@@ -368,8 +355,11 @@ h2 {
   margin-top: -100px;
 }
 
-/* Paprika */
-.product-section.pizza {
+
+.distributor-section {
+  background-image: url(../Assets/fallSnacks.png);
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   padding: 0px 0 100px;
   background-color: #d1d1d1;
@@ -377,7 +367,7 @@ h2 {
 
 }
 
-.product-section.pizza span {
+.product-section.distributor span {
   color: var(--primary-black);
 }
 
@@ -523,15 +513,6 @@ h2 {
   position: relative;
 }
 
-.signup::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(../Assets/footer-bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .signup-content {
   display: flex;
@@ -775,8 +756,24 @@ h2 {
     display: none;
   }
 
+  .nav-links.show {
+    display: flex;
+  }
+
   .hero h1 {
     font-size: 3rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 60px 20px 20px;
+    z-index: 999;
   }
 }
 
@@ -805,12 +802,23 @@ h2 {
 }
 
 @media (max-width: 320px) {
+
+  .navbar {
+    padding: 20px 20px;
+    gap: 20px;
+}
+
   .container {
     padding: 0 15px;
   }
 
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .distributor-text h2 {
+    width: 100%;
+    font-size: 1.8rem;
   }
 }
 
@@ -937,7 +945,9 @@ h2 {
 @media (min-width: 481px) {
   .distributor-text h2 {
     font-size: 3rem;
+    width: auto;
   }
+
 
   .distributor-text p {
     font-size: 1.1rem;
@@ -1086,9 +1096,7 @@ h2 {
   }
 
   .nav-links {
-    flex-direction: row;
     gap: 15px;
-    margin-top: 30px;
   }
 
   .legal-links {
@@ -1181,6 +1189,13 @@ h2 {
 }
 
 @media (max-width: 320px) {
+
+  .buy-button {
+    padding: 8px 15px;
+    font-size: 12px;
+    width: 100%;
+  }
+  
   .company-details {
     font-size: 14px;
   }
