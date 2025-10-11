@@ -25,10 +25,14 @@
   --primary-orange: #ffa500;
   --text-dark: #333333;
   --text-light: #666666;
+  /* Global left content gutter */
+  --content-left: 50px;
 }
 
 body {
   overflow-x: hidden;
+  /* Default left content gutter */
+  --content-left: 50px;
 }
 
 /* Typography */
@@ -38,6 +42,38 @@ h2,
 h2 span {
   font-family: "Harabara", sans-serif;
   font-weight: 500;
+}
+
+
+/* Ensure inner wrappers don't add extra left offset; they should align with the section gutter */
+.hero-content,
+.content-testmonial,
+.content-wrapper,
+.distributor-content,
+.review-section {
+  padding-left: 80px !important;
+  margin-left: 0 !important;
+}
+.hero-content {
+  padding-left: 90px !important;
+}
+
+.distributor-content {
+  padding-left: 60px !important;
+}
+
+.content-wrapper {
+  padding-left: 93px !important;
+}
+/* Responsive adjustments for the shared left gutter only */
+@media (max-width: 1024px) {
+  body { --content-left: 40px; }
+}
+@media (max-width: 768px) {
+  body { --content-left: 20px; }
+}
+@media (max-width: 480px) {
+  body { --content-left: 15px; }
 }
 
 /* Navigation Styles */
@@ -131,7 +167,7 @@ h2 span {
 }
 
 .hero-content {
-  padding: 5rem;
+  padding: 5rem 5rem 5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -144,6 +180,9 @@ h2 span {
   gap: 0.5rem;
   color: var(--primary-orange);
   font-weight: 600;
+}
+.partner-section{
+  padding-left: 20px;
 }
 
 .tag i {
@@ -222,9 +261,10 @@ h2 span {
 }
 
 .dropdown {
-  text-align: center;
+  text-align: left;
   margin-top: -25px;
   margin-bottom: 25px;
+  margin-left: 0;
 }
 
 .dropdown img {
@@ -291,7 +331,7 @@ h2 span {
   background: rgba(255, 255, 255, 0.5);
 }
 
-.slider-paragraph{
+.slider-paragraph {
   color: #f5f5f5;
   font-size: 60px;
   position: absolute;
@@ -301,10 +341,12 @@ h2 span {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -357,10 +399,11 @@ h2 span {
   height: 500px;
 }
 
+/* Keep your original center logo exactly as it is */
 .center-logo {
   position: absolute;
-  top: 62%;
-  left: 70%;
+  top: 78%;
+  left: 69%;
   transform: translate(-50%, -50%);
   width: 360px;
   height: 360px;
@@ -370,6 +413,8 @@ h2 span {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  z-index: 5;
 }
 
 .center-logo img {
@@ -377,49 +422,70 @@ h2 span {
   height: auto;
 }
 
-/* Product Styles */
+/* The container that holds both the center and the surrounding products */
+.circle-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* or your section height */
+}
+
+/* Products container — positions around the center logo */
+.products-circle {
+  position: absolute;
+  top: 78%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  /* controls the size of the orbit */
+  height: 600px;
+}
+
+/* Product styling */
 .product {
   position: absolute;
+  top: 70%;
+  left: 60%;
   width: 100px;
   height: 100px;
+  transform-origin: -250px center;
+  /* controls radius */
+  transition: transform 0.3s ease;
 }
 
 .product img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding-bottom: 20px;
 }
 
-.product-1 {
-  top: 1%;
-  left: 67%;
-  transform: translateX(-50%);
+/* Distribute products evenly in a circle */
+.product:nth-child(1) {
+  transform: rotate(0deg) translateX(250px) rotate(0deg);
 }
-.product-2 {
-  top: 10%;
-  right: -20%;
+
+.product:nth-child(2) {
+  transform: rotate(60deg) translateX(250px) rotate(-60deg);
 }
-.product-3 {
-  bottom: 5%;
-  right: -20%;
+
+.product:nth-child(3) {
+  transform: rotate(120deg) translateX(250px) rotate(-120deg);
 }
-.product-4 {
-  bottom: -16%;
-  left: 66%;
-  transform: translateX(-50%);
+
+.product:nth-child(4) {
+  transform: rotate(180deg) translateX(250px) rotate(-180deg);
 }
-.product-5 {
-  bottom: 10%;
-  left: 10%;
+
+.product:nth-child(5) {
+  transform: rotate(240deg) translateX(250px) rotate(-240deg);
 }
-.product-6 {
-  top: 15%;
-  left: 15%;
+
+.product:nth-child(6) {
+  transform: rotate(300deg) translateX(250px) rotate(-300deg);
 }
 
 .product img {
-  width: 100%;
+  width: 90%;
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -431,7 +497,9 @@ h2 span {
 .review-section {
   max-width: 600px;
   position: relative;
-  padding: 0 60px;
+  padding: 0 0px;
+  top: 0;
+  left: 0;
 }
 
 .crisps-1 {
@@ -465,11 +533,13 @@ h2 span {
 }
 
 .testimonial-text {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 1.8;
+  margin: 25px 0 30px;
   position: relative;
-  padding: 0 40px;
+  padding: 0 100px;
+
+
 }
 
 .quote-marks {
@@ -653,18 +723,18 @@ h2 span {
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .content-wrapper {
-      gap: 40px;
+    gap: 40px;
   }
 
   .title {
-      font-size: 40px;
+    font-size: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .content-wrapper {
-      flex-direction: column;
-      gap: 40px;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .slider-paragraph {
@@ -674,29 +744,48 @@ h2 span {
 
   .images-container,
   .content {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .title {
-      font-size: 36px;
+    font-size: 36px;
   }
 
   .label {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
+  .main-banner {
+    padding-left: 15px;
+  }
+
+  .container {
+    padding-left: 15px;
+  }
+
   .life-section {
-      padding: 60px 0;
+    padding: 60px 0 60px 15px;
+  }
+  .partner-section {
+    padding-left: 15px;
+  }
+
+  .primary-nav {
+    padding-left: 15px;
+  }
+
+  .dropdown {
+    margin-left: 15px;
   }
 
   .title {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   .description {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
 
@@ -713,7 +802,7 @@ h2 span {
 .signup-content {
   display: flex;
   background-color: #1a1a1a;
-  padding: 80px 20px;
+  padding: 80px 10px;
   text-align: center;
 }
 
@@ -825,7 +914,6 @@ h2 span {
   color: white;
   display: flex;
   left: 0;
-  margin-left: 70px;
   top: 0;
   margin-top: -40px;
   right: 0;
@@ -885,7 +973,7 @@ h2 span {
   align-items: center;
   bottom: 0;
   left: 0;
-  margin-left: 80px;
+  margin-left: 50px;
   border-top: 3px solid rgba(255, 255, 255, 0.323);
 }
 
@@ -927,6 +1015,7 @@ h2 span {
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -940,6 +1029,7 @@ h2 span {
   .main-banner {
     display: block;
     min-height: 150vh;
+    padding-left: 20px;
   }
 
   body {
@@ -956,7 +1046,7 @@ h2 span {
   .hero-image {
     display: flex;
     height: 419px;
-    }
+  }
 
 
   .hero-background {
@@ -1066,36 +1156,66 @@ h2 span {
 
 /* Tablet (SM) */
 @media (max-width: 768px) {
-.hero-content p{
-    margin-top: 30px;
-}
+  .main-banner {
+    padding-left: 20px;
+  }
 
-.hero-content .social-icon {
+  .container {
+    padding-left: 20px;
+  }
+
+  .life-section {
+    padding-left: 20px;
+  }
+
+  .partner-section {
+    padding-left: 20px;
+  }
+
+  .signup {
+    padding-left: 20px;
+  }
+
+  .primary-nav {
+    padding-left: 20px;
+  }
+
+  .dropdown {
+    margin-left: 20px;
+  }
+
+  .hero-content p {
+    margin-top: 30px;
+  }
+
+  .hero-content .social-icon {
     margin-top: 30px;
     margin-bottom: 70px;
-}
+  }
 
-.hero-content span{
+  .hero-content span {
     margin-top: 50px;
-}
+  }
 
-.hero-content h1{
+  .hero-content h1 {
     margin-top: 30px;
-}
+  }
 
 
-.hero-image img {
+  .hero-image img {
     width: 400px;
-}
+  }
 
-.hero-image {
+  .hero-image {
     display: flex;
     height: 603px;
-}
-.dropdown {
+  }
+
+  .dropdown {
     text-align: center;
     margin-bottom: 25px;
-}
+  }
+
   .content-testmonial {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1156,7 +1276,7 @@ h2 span {
   .life-section .content {
     text-align: center;
     padding: 20px;
-}
+  }
 
   .signup-content {
     flex-direction: column;
@@ -1235,84 +1355,84 @@ h2 span {
     font-size: 1.1rem;
   }
 
-/* Life Section Styles */
-.life-section {
-  position: relative;
-  overflow: hidden;
-  padding: 4rem 1rem;
-}
+  /* Life Section Styles */
+  .life-section {
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 1rem;
+  }
 
-.life-section .content-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+  .life-section .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-.images-container {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
+  .images-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
 
-.team-image {
-  width: 100%;
-  border-radius: 20px;
-  overflow: hidden;
-}
+  .team-image {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
 
-.team-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  .team-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-.life-section .content {
-  text-align: center;
-}
+  .life-section .content {
+    text-align: center;
+  }
 
-.label {
-  color: #ff8c00;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-}
+  .label {
+    color: #ff8c00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
 
-.label::before {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background: url("assets/chipsyellowicon.svg") no-repeat center / contain;
-}
+  .label::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url("assets/chipsyellowicon.svg") no-repeat center / contain;
+  }
 
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-}
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
 
-.title-life {
-  color: #ff8c00;
-}
+  .title-life {
+    color: #ff8c00;
+  }
 
-.title-of {
-  color: #000;
-}
+  .title-of {
+    color: #000;
+  }
 
-.title-party {
-  color: #ff3a3a;
-}
+  .title-party {
+    color: #ff3a3a;
+  }
 
-.description {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
+  .description {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
 
 }
 
@@ -1324,10 +1444,9 @@ h2 span {
 
 /* Distributor Section Styles */
 .partner-section {
-  background: url(../Assets/fallSnacks.png)
-    center / cover no-repeat;
+  background: url(../Assets/fallSnacks.png) center / cover no-repeat;
   background-color: #ee252a;
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 4rem 0px;
   background-position: center;
   background-size: cover;
 }
@@ -1465,19 +1584,22 @@ h2 span {
     font-size: 1.8rem;
     width: 400px;
   }
+
   .flavors,
   .description {
     width: 400px;
   }
 
-  .signup-form{
+  .signup-form {
     align-items: center;
 
   }
+
   .center-logo {
     width: 200px;
     height: 200px;
   }
+
   .main-logo {
     width: 100px;
   }
@@ -1489,10 +1611,12 @@ h2 span {
     font-size: 2rem;
     width: 460px;
   }
+
   .flavors,
   .description {
     width: 460px;
   }
+
   .distributor-content {
     padding: 0 20px;
   }
@@ -1504,9 +1628,11 @@ h2 span {
     font-size: 2.2rem;
     width: 520px;
   }
+
   .hero-content {
     padding: 2rem;
   }
+
   .center-logo {
     width: 240px;
     height: 240px;
@@ -1519,10 +1645,12 @@ h2 span {
     font-size: 2.5rem;
     width: 600px;
   }
+
   .content-testmonial {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .center-logo {
     width: 280px;
     height: 280px;
@@ -1534,6 +1662,7 @@ h2 span {
   .main-banner {
     grid-template-columns: 1fr;
   }
+
   .hero-content {
     padding: 3rem;
   }
@@ -1571,10 +1700,12 @@ h2 span {
   .main-banner {
     grid-template-columns: 1fr 1fr;
   }
+
   .hero-title {
     font-size: 2.8rem;
     width: 100%;
   }
+
   .content-wrapper {
     max-width: 90%;
   }
@@ -1585,12 +1716,15 @@ h2 span {
   .hero-title {
     font-size: 3rem;
   }
+
   .distributor-text h2 {
     font-size: 3rem;
   }
+
   .content-wrapper {
     gap: 2rem;
   }
+
   .center-logo {
     width: 320px;
     height: 320px;
@@ -1602,21 +1736,26 @@ h2 span {
   .hero-title {
     font-size: 5rem;
   }
+
   .flavors,
   .description {
     font-size: 1.5rem;
   }
+
   .content-wrapper {
     max-width: 2000px;
     margin: 0 auto;
   }
+
   .center-logo {
     width: 400px;
     height: 400px;
   }
+
   .testimonial-text {
     font-size: 2rem;
   }
+
   .distributor-text h2 {
     font-size: 4.5rem;
   }
@@ -1627,6 +1766,7 @@ h2 span {
   .menu-icon {
     display: flex;
   }
+
   .main-nav-links {
     display: none;
     flex-direction: column;
@@ -1639,6 +1779,7 @@ h2 span {
     padding: 60px 20px 20px;
     z-index: 999;
   }
+
   .main-nav-links.show {
     display: flex;
   }
@@ -1646,6 +1787,7 @@ h2 span {
 
 /* Image Responsiveness */
 @media (max-width: 1024px) {
+
   .hero-image img,
   .team-image img,
   .van-image {
@@ -1661,14 +1803,40 @@ h2 span {
     overflow-x: clip;
   }
 
-    .dropdown {
-        margin-top: 25px;
-    }
+  .main-banner {
+    padding-left: 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+  }
+
+  .life-section {
+    padding-left: 10px;
+  }
+
+  .partner-section {
+    padding-left: 10px;
+  }
+
+  .signup {
+    padding-left: 10px;
+  }
+
+  .primary-nav {
+    padding-left: 10px;
+  }
+
+  .dropdown {
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+
   .content-testmonial {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 10px;
-        height: 100vh;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+    height: 100vh;
   }
 
   .testimonial-text {
@@ -1704,7 +1872,7 @@ h2 span {
   }
 
   .product {
-    width: 50px;
+    width: 40px;
     height: 50px;
   }
 
@@ -1712,22 +1880,27 @@ h2 span {
     top: 0%;
     left: 50%;
   }
+
   .product-2 {
     top: 15%;
     right: 7%;
   }
+
   .product-3 {
     bottom: 20%;
     right: 10%;
   }
+
   .product-4 {
     bottom: 6%;
     left: 50%;
   }
+
   .product-5 {
     bottom: 15%;
     left: 9%;
   }
+
   .product-6 {
     top: 15%;
     left: 7%;
@@ -1767,21 +1940,26 @@ h2 span {
     font-size: 1.5rem;
     width: 280px;
   }
+
   .flavors,
   .description {
     width: 280px;
     font-size: 0.9rem;
   }
+
   .hero-content {
     padding: 1rem;
   }
+
   .main-logo {
     width: 90px;
   }
+
   .main-buy-button {
     padding: 8px 16px;
     font-size: 14px;
   }
+
   .center-logo {
     width: 160px;
     height: 160px;
@@ -2159,6 +2337,7 @@ h2 span {
   .company-info nav {
     margin-left: 35px;
   }
+
   .footer-bottom {
     gap: 0;
   }
@@ -2280,14 +2459,15 @@ h2 span {
 @media (max-width: 375px) {
 
 
-    .dropdown {
-        margin-top: 25px;
-    }
+  .dropdown {
+    margin-top: 25px;
+  }
+
   .content-testmonial {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 10px;
-        height: 100vh;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+    height: 100vh;
   }
 
   .testimonial-text {
@@ -2356,6 +2536,7 @@ h2 span {
     font-size: 1.5rem;
     width: 280px;
   }
+
   .flavors,
   .description {
     /* width: 280px; */
@@ -2368,23 +2549,25 @@ h2 span {
 
   .hero-content span {
     margin-bottom: 20px;
-}
+  }
 
   .hero-content p {
     margin-bottom: 20px;
-}
+  }
 
   .hero-content h1 {
     margin-bottom: 20px;
-}
+  }
 
   .main-logo {
     width: 90px;
   }
+
   .main-buy-button {
     padding: 8px 16px;
     font-size: 14px;
   }
+
   .center-logo {
     width: 160px;
     height: 160px;
@@ -2453,21 +2636,24 @@ h2 span {
     height: auto;
     display: flow;
   }
+
   .center-logo {
     height: 65%;
     width: 65%;
   }
+
   .products {
     display: none;
   }
 }
 
 @media ((min-width: 120px) and (max-width: 420px)) {
+
   .crisps-1,
   .crisps-2 {
     display: none;
   }
-  
+
 }
 
 
@@ -2487,6 +2673,7 @@ h2 span {
   .company-info nav {
     margin-left: 35px;
   }
+
   .footer-bottom {
     gap: 0;
   }
@@ -2498,7 +2685,7 @@ h2 span {
   .signup-header {
     font-size: 40px;
   }
-  
+
   .white {
     color: #fff;
   }
@@ -2511,7 +2698,7 @@ h2 span {
     padding: 60px 20px;
   }
 
-  
+
   .white {
     color: #fff;
   }
@@ -2567,7 +2754,7 @@ h2 span {
     max-width: 100%;
   }
 
-  
+
   .white {
     color: #fff;
   }
@@ -2593,7 +2780,7 @@ h2 span {
     font-size: 28px;
   }
 
-  
+
   .white {
     color: #fff;
   }
@@ -2619,7 +2806,7 @@ h2 span {
   .company-details {
     font-size: 14px;
   }
-  
+
   .white {
     color: #fff;
   }
