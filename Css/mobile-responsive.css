@@ -1,0 +1,1432 @@
+/* Mobile Responsive CSS for iPhone and Small Screens */
+/* Focus on fixing horizontal overflow and spacing issues */
+
+/* ========================================
+   GLOBAL MOBILE FIXES
+   ======================================== */
+
+/* Ensure no horizontal overflow on all mobile devices */
+@media (max-width: 480px) {
+    * {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    /* Fix all sections to prevent overflow */
+    .main-banner,
+    .container,
+    .life-section,
+    .partner-section,
+    .signup {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin: 0 !important;
+    }
+}
+
+/* ========================================
+   iPhone SPECIFIC FIXES (320px - 420px)
+   ======================================== */
+
+@media (max-width: 420px) {
+
+    /* Navigation fixes */
+    .primary-nav {
+        padding: 15px 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .main-logo {
+        width: 80px !important;
+        height: auto !important;
+    }
+
+    .main-buy-button {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+    }
+
+    /* Hero section fixes */
+    .hero-content {
+        padding: 1rem 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .hero-title {
+        font-size: 1.4rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.2 !important;
+    }
+
+    .flavors,
+    .description {
+        font-size: 0.85rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Hero image fixes */
+    .hero-image {
+        width: 100% !important;
+        max-width: 100vw !important;
+        height: 300px !important;
+        margin: 0 !important;
+    }
+
+    .hero-background {
+        width: 100% !important;
+        max-width: 100vw !important;
+        right: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100% !important;
+    }
+
+    .slider {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slides {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slides img {
+        max-width: 80% !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .slider-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    /* Testimonial section fixes */
+    .content-testmonial {
+        padding: 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        gap: 15px !important;
+    }
+
+    .logo-container {
+        width: 200px !important;
+        height: 200px !important;
+        max-width: 200px !important;
+    }
+
+    .center-logo {
+        width: 120px !important;
+        height: 120px !important;
+        max-width: 120px !important;
+    }
+
+    .review-section {
+        padding: 0 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .testimonial-text {
+        font-size: 0.8rem !important;
+        padding: 0 10px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Life section fixes */
+    .content-wrapper {
+        padding: 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: column !important;
+    }
+
+    .images-container,
+    .content {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .team-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Partner section fixes */
+    .distributor-content {
+        padding: 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: column !important;
+    }
+
+    .distributor-text {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .distributor-text h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .van-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Signup section fixes */
+    .signup {
+        padding: 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .signup-header {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .signup-form {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .signup-form input,
+    .signup-form button {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 14px !important;
+    }
+
+    /* Footer fixes */
+    .company-info {
+        padding: 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .company-details {
+        font-size: 12px !important;
+        width: 100% !important;
+    }
+
+    .nav-links {
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .footer-bottom {
+        padding: 15px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    .legal-links {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .legal-links a {
+        margin: 0 !important;
+        font-size: 11px !important;
+    }
+
+    .social-icons {
+        justify-content: center !important;
+    }
+
+    .social-icons a {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 14px !important;
+    }
+}
+
+/* ========================================
+   EXTRA SMALL DEVICES (320px and below)
+   ======================================== */
+
+@media (max-width: 320px) {
+
+    /* Even tighter spacing for very small screens */
+    .hero-content {
+        padding: 0.8rem 10px !important;
+    }
+
+    .hero-title {
+        font-size: 1.2rem !important;
+    }
+
+    .flavors,
+    .description {
+        font-size: 0.8rem !important;
+    }
+
+    .content-testmonial {
+        padding: 10px !important;
+    }
+
+    /* Smaller product orbit for very small screens */
+    .logo-container {
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 220px !important;
+    }
+
+    .center-logo {
+        width: 140px !important;
+        height: 140px !important;
+        max-width: 140px !important;
+        border-width: 10px !important;
+    }
+
+    /* Smaller product orbit for 320px screens - close to yellow circle */
+    .products-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 180px !important;
+        height: 180px !important;
+        max-width: 180px !important;
+    }
+
+    .product {
+        width: 45px !important;
+        height: 45px !important;
+        max-width: 45px !important;
+        transform-origin: -90px center !important;
+    }
+
+    /* Close positioning for smaller screens */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(90px) rotate(0deg) !important;
+    }
+
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(90px) rotate(-60deg) !important;
+    }
+
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(90px) rotate(-120deg) !important;
+    }
+
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(90px) rotate(-180deg) !important;
+    }
+
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(90px) rotate(-240deg) !important;
+    }
+
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(90px) rotate(-300deg) !important;
+    }
+
+    .testimonial-text {
+        font-size: 0.75rem !important;
+    }
+
+    .signup-header {
+        font-size: 1rem !important;
+    }
+
+    .company-details {
+        font-size: 11px !important;
+    }
+}
+
+/* ========================================
+   HIDE ELEMENTS THAT CAUSE OVERFLOW
+   ======================================== */
+
+@media (max-width: 420px) {
+
+    /* Hide corner crisps that extend beyond viewport */
+    .corner-crips,
+    .crisps-1,
+    .crisps-2 {
+        display: none !important;
+    }
+
+    /* Show products in testimonial section with mobile-friendly orbit */
+    .products,
+    .product {
+        display: block !important;
+    }
+
+    /* Mobile-friendly product orbit around logo */
+    .logo-container {
+        width: 280px !important;
+        height: 280px !important;
+        max-width: 280px !important;
+        position: relative !important;
+    }
+
+    .center-logo {
+        position: absolute !important;
+        top: 50% !important;
+        left: 40% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 180px !important;
+        height: 180px !important;
+        max-width: 180px !important;
+        border-width: 12px !important;
+        z-index: 10 !important;
+    }
+
+    /* Mobile product orbit - positioned close to the yellow circle edge */
+    .products-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 200px !important;
+        height: 200px !important;
+        max-width: 200px !important;
+    }
+
+    .product {
+        position: absolute !important;
+        width: 50px !important;
+        top: 40% !important;
+        left: 40% !important;
+        height: 50px !important;
+        max-width: 50px !important;
+        transform-origin: -100px center !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Mobile product positioning - very close to the yellow circle edge */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(120px) rotate(0deg) !important;
+    }
+
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(130px) rotate(-60deg) !important;
+    }
+
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(130px) rotate(-120deg) !important;
+    }
+
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(120px) rotate(-180deg) !important;
+    }
+
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(120px) rotate(-240deg) !important;
+    }
+
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(120px) rotate(-300deg) !important;
+    }
+
+    .product img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Subtle hover effect for mobile */
+    .product:hover img {
+        transform: scale(1.05) !important;
+    }
+
+    /* Subtle floating animation for mobile products */
+    .product img {
+        animation: mobileFloat 4s ease-in-out infinite !important;
+    }
+
+    .product:nth-child(1) img {
+        animation-delay: 0s !important;
+    }
+
+    .product:nth-child(2) img {
+        animation-delay: 0.5s !important;
+    }
+
+    .product:nth-child(3) img {
+        animation-delay: 1s !important;
+    }
+
+    .product:nth-child(4) img {
+        animation-delay: 1.5s !important;
+    }
+
+    .product:nth-child(5) img {
+        animation-delay: 2s !important;
+    }
+
+    .product:nth-child(6) img {
+        animation-delay: 2.5s !important;
+    }
+
+    @keyframes mobileFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    /* Ensure sunburst background doesn't overflow */
+    .sunburst-bg {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+    }
+}
+
+/* ========================================
+   FIX SPECIFIC OVERFLOW ISSUES
+   ======================================== */
+
+@media (max-width: 480px) {
+
+    /* Fix any elements that might extend beyond viewport */
+    .hero-background::before {
+        display: none !important;
+    }
+
+    /* Ensure slider navigation doesn't overflow */
+    .slider-nav button {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 1.5rem !important;
+    }
+
+    /* Fix testimonial navigation */
+    .nav-arrows {
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0 !important;
+        padding: 0 15px !important;
+    }
+
+    .nav-dot {
+        width: 8px !important;
+        height: 8px !important;
+    }
+
+    /* Mobile product orbit - positioned close to the yellow circle edge */
+
+
+    .center-logo {
+        position: absolute !important;
+        top: 50% !important;
+        left: 60% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 180px !important;
+        height: 180px !important;
+        max-width: 180px !important;
+        border-width: 12px !important;
+        z-index: 10 !important;
+    }
+
+    .products-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 60% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 200px !important;
+        height: 200px !important;
+        max-width: 200px !important;
+    }
+
+    .product {
+        position: absolute !important;
+        width: 50px !important;
+        top: 40% !important;
+        left: 50% !important;
+        height: 50px !important;
+        max-width: 50px !important;
+        transform-origin: -100px center !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Mobile product positioning - very close to the yellow circle edge */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(120px) rotate(0deg) !important;
+    }
+
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(130px) rotate(-60deg) !important;
+    }
+
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(130px) rotate(-120deg) !important;
+    }
+
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(120px) rotate(-180deg) !important;
+    }
+
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(120px) rotate(-240deg) !important;
+    }
+
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(120px) rotate(-300deg) !important;
+    }
+
+}
+
+/* ========================================
+   TABLET RESPONSIVENESS (769px - 1024px)
+   ======================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Global tablet fixes */
+    * {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    /* Fix all sections to prevent overflow */
+    .main-banner,
+    .container,
+    .life-section,
+    .partner-section,
+    .signup {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        margin: 0 !important;
+    }
+
+    /* Navigation fixes for tablet */
+    .primary-nav {
+        padding: 20px 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .main-logo {
+        width: 120px !important;
+        height: auto !important;
+    }
+
+    .main-buy-button {
+        padding: 10px 20px !important;
+        font-size: 14px !important;
+    }
+
+    /* Hero section fixes for tablet */
+    .hero-content {
+        padding: 2rem 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .hero-title {
+        font-size: 2.2rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.3 !important;
+    }
+
+    .flavors,
+    .description {
+        font-size: 1rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Hero image fixes for tablet */
+    .hero-image {
+        width: 100% !important;
+        max-width: 100vw !important;
+        height: 500px !important;
+        margin: 0 !important;
+    }
+
+    .hero-background {
+        width: 100% !important;
+        max-width: 100vw !important;
+        right: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100% !important;
+    }
+
+    .slider {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slides {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slides img {
+        max-width: 70% !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .slider-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 30px !important;
+    }
+
+    /* Testimonial section fixes for tablet */
+    .content-testmonial {
+        padding: 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        gap: 30px !important;
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    /* Tablet-friendly product orbit around logo */
+    .logo-container {
+        width: 400px !important;
+        height: 400px !important;
+        max-width: 400px !important;
+        position: relative !important;
+    }
+
+    .center-logo {
+        position: absolute !important;
+        top: 55% !important;
+        left: 60% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 240px !important;
+        height: 240px !important;
+        max-width: 250px !important;
+        border-width: 15px !important;
+        z-index: 10 !important;
+    }
+
+    /* Tablet product orbit - medium radius for tablet screens */
+    .products-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 350px !important;
+        height: 350px !important;
+        max-width: 350px !important;
+    }
+
+    .product {
+        position: absolute !important;
+        width: 80px !important;
+        top: 45% !important;
+        left: 50% !important;
+        height: 80px !important;
+        max-width: 80px !important;
+        transform-origin: -175px center !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Tablet product positioning - close to the yellow circle edge */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(175px) rotate(0deg) !important;
+    }
+
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(175px) rotate(-60deg) !important;
+    }
+
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(175px) rotate(-120deg) !important;
+    }
+
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(175px) rotate(-180deg) !important;
+    }
+
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(175px) rotate(-240deg) !important;
+    }
+
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(175px) rotate(-300deg) !important;
+    }
+
+    .product img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Tablet hover effect */
+    .product:hover img {
+        transform: scale(1.1) !important;
+    }
+
+    /* Tablet floating animation */
+    .product img {
+        animation: tabletFloat 5s ease-in-out infinite !important;
+    }
+
+    .product:nth-child(1) img {
+        animation-delay: 0s !important;
+    }
+
+    .product:nth-child(2) img {
+        animation-delay: 0.8s !important;
+    }
+
+    .product:nth-child(3) img {
+        animation-delay: 1.6s !important;
+    }
+
+    .product:nth-child(4) img {
+        animation-delay: 2.4s !important;
+    }
+
+    .product:nth-child(5) img {
+        animation-delay: 3.2s !important;
+    }
+
+    .product:nth-child(6) img {
+        animation-delay: 4s !important;
+    }
+
+    @keyframes tabletFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-12px);
+        }
+    }
+
+    .review-section {
+        padding: 0 30px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .testimonial-text {
+        font-size: 1.1rem !important;
+        padding: 0 20px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Life section fixes for tablet */
+    .content-wrapper {
+        padding: 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+    }
+
+    .images-container,
+    .content {
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
+    .team-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Partner section fixes for tablet */
+    .distributor-content {
+        padding: 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+    }
+
+    .distributor-text {
+        width: 60% !important;
+        max-width: 60% !important;
+    }
+
+    .distributor-text h2 {
+        font-size: 2.2rem !important;
+    }
+
+    .van-image {
+        width: 40% !important;
+        max-width: 40% !important;
+        height: auto !important;
+    }
+
+    /* Signup section fixes for tablet */
+    .signup {
+        padding: 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .signup-header {
+        font-size: 2rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .signup-form {
+        width: 100% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+    }
+
+    .signup-form input,
+    .signup-form button {
+        width: 100% !important;
+        padding: 15px !important;
+        font-size: 16px !important;
+    }
+
+    /* Footer fixes for tablet */
+    .company-info {
+        padding: 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 40px !important;
+    }
+
+    .company-details {
+        font-size: 14px !important;
+        width: 60% !important;
+    }
+
+    .nav-links {
+        flex-direction: row !important;
+        gap: 20px !important;
+        width: 40% !important;
+    }
+
+    .footer-bottom {
+        padding: 30px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+        text-align: left !important;
+    }
+
+    .legal-links {
+        flex-direction: row !important;
+        gap: 20px !important;
+    }
+
+    .legal-links a {
+        margin: 0 !important;
+        font-size: 12px !important;
+    }
+
+    .social-icons {
+        justify-content: flex-end !important;
+    }
+
+    .social-icons a {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 16px !important;
+    }
+
+    /* Hide corner crisps that extend beyond viewport */
+    .corner-crips,
+    .crisps-1,
+    .crisps-2 {
+        display: none !important;
+    }
+
+    /* Show products in testimonial section with tablet-friendly orbit */
+    .products,
+    .product {
+        display: block !important;
+    }
+
+    /* Ensure sunburst background doesn't overflow */
+    .sunburst-bg {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+    }
+}
+
+/* ========================================
+   MEDIUM TABLET RESPONSIVENESS (768px - 900px)
+   ======================================== */
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+    /* Global medium tablet fixes */
+    * {
+        max-width: 100vw !important;
+        box-sizing: border-box !important;
+    }
+
+    html,
+    body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    /* Fix all sections to prevent overflow */
+    .main-banner,
+    .container,
+    .life-section,
+    .partner-section,
+    .signup {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding-left: 25px !important;
+        padding-right: 25px !important;
+        margin: 0 !important;
+    }
+
+    /* Navigation fixes for medium tablet */
+    .primary-nav {
+        padding: 18px 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .main-logo {
+        width: 110px !important;
+        height: auto !important;
+    }
+
+    .main-buy-button {
+        padding: 9px 18px !important;
+        font-size: 13px !important;
+    }
+
+    /* Hero section fixes for medium tablet */
+    .hero-content {
+        padding: 1.8rem 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .hero-title {
+        font-size: 2rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.3 !important;
+    }
+
+    .flavors,
+    .description {
+        font-size: 0.95rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Hero image fixes for medium tablet */
+    .hero-image {
+        width: 100% !important;
+        max-width: 100vw !important;
+        height: 450px !important;
+        margin: 0 !important;
+    }
+
+    .hero-background {
+        width: 100% !important;
+        max-width: 100vw !important;
+        right: 0 !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100% !important;
+    }
+
+    .slider {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slides {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+    }
+
+    .slides img {
+        max-width: 65% !important;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .slider-nav {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 25px !important;
+    }
+
+    /* Testimonial section fixes for medium tablet - ROW LAYOUT */
+    .content-testmonial {
+        padding: 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        gap: 25px !important;
+        grid-template-columns: 1fr 1fr !important;
+        display: grid !important;
+        align-items: center !important;
+    }
+
+    /* Medium tablet-friendly product orbit around logo */
+    .logo-container {
+        width: 350px !important;
+        height: 350px !important;
+        max-width: 350px !important;
+        position: relative !important;
+        justify-self: center !important;
+    }
+
+    .center-logo {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 220px !important;
+        border-width: 14px !important;
+        z-index: 10 !important;
+    }
+
+    /* Medium tablet product orbit - smaller radius for medium tablet screens */
+    .products-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 300px !important;
+        height: 300px !important;
+        max-width: 300px !important;
+    }
+
+    .product {
+        position: absolute !important;
+        width: 70px !important;
+        height: 70px !important;
+        left: 40% !important;
+        max-width: 70px !important;
+        transform-origin: -150px center !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Medium tablet product positioning - close to the yellow circle edge */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(150px) rotate(0deg) !important;
+    }
+
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(150px) rotate(-60deg) !important;
+    }
+
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(150px) rotate(-120deg) !important;
+    }
+
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(150px) rotate(-180deg) !important;
+    }
+
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(150px) rotate(-240deg) !important;
+    }
+
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(150px) rotate(-300deg) !important;
+    }
+
+    .product img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Medium tablet hover effect */
+    .product:hover img {
+        transform: scale(1.08) !important;
+    }
+
+    /* Medium tablet floating animation */
+    .product img {
+        animation: mediumTabletFloat 4.5s ease-in-out infinite !important;
+    }
+
+    .product:nth-child(1) img {
+        animation-delay: 0s !important;
+    }
+
+    .product:nth-child(2) img {
+        animation-delay: 0.7s !important;
+    }
+
+    .product:nth-child(3) img {
+        animation-delay: 1.4s !important;
+    }
+
+    .product:nth-child(4) img {
+        animation-delay: 2.1s !important;
+    }
+
+    .product:nth-child(5) img {
+        animation-delay: 2.8s !important;
+    }
+
+    .product:nth-child(6) img {
+        animation-delay: 3.5s !important;
+    }
+
+    @keyframes mediumTabletFloat {
+
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .review-section {
+        padding: 0 25px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-self: start !important;
+    }
+
+    .testimonial-text {
+        font-size: 1rem !important;
+        padding: 0 15px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Life section fixes for medium tablet */
+    .content-wrapper {
+        padding: 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 25px !important;
+    }
+
+    .images-container,
+    .content {
+        max-width: 50% !important;
+        width: 50% !important;
+    }
+
+    .team-image img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Partner section fixes for medium tablet */
+    .distributor-content {
+        padding: 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 25px !important;
+    }
+
+    .distributor-text {
+        width: 60% !important;
+        max-width: 60% !important;
+    }
+
+    .distributor-text h2 {
+        font-size: 2rem !important;
+    }
+
+    .van-image {
+        width: 40% !important;
+        max-width: 40% !important;
+        height: auto !important;
+    }
+
+    /* Signup section fixes for medium tablet */
+    .signup {
+        padding: 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .signup-header {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .signup-form {
+        width: 100% !important;
+        max-width: 450px !important;
+        margin: 0 auto !important;
+    }
+
+    .signup-form input,
+    .signup-form button {
+        width: 100% !important;
+        padding: 14px !important;
+        font-size: 15px !important;
+    }
+
+    /* Footer fixes for medium tablet */
+    .company-info {
+        padding: 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 35px !important;
+    }
+
+    .company-details {
+        font-size: 13px !important;
+        width: 60% !important;
+    }
+
+    .nav-links {
+        flex-direction: row !important;
+        gap: 18px !important;
+        width: 40% !important;
+    }
+
+    .footer-bottom {
+        padding: 25px !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        flex-direction: row !important;
+        gap: 25px !important;
+        text-align: left !important;
+    }
+
+    .legal-links {
+        flex-direction: row !important;
+        gap: 18px !important;
+    }
+
+    .legal-links a {
+        margin: 0 !important;
+        font-size: 11px !important;
+    }
+
+    .social-icons {
+        justify-content: flex-end !important;
+    }
+
+    .social-icons a {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 15px !important;
+    }
+
+    /* Hide corner crisps that extend beyond viewport */
+    .corner-crips,
+    .crisps-1,
+    .crisps-2 {
+        display: none !important;
+    }
+
+    /* Show products in testimonial section with medium tablet-friendly orbit */
+    .products,
+    .product {
+        display: block !important;
+    }
+
+    /* Ensure sunburst background doesn't overflow */
+    .sunburst-bg {
+        width: 100% !important;
+        max-width: 100vw !important;
+        overflow: hidden !important;
+    }
+
+    /* Navigation arrows for medium tablet */
+    .nav-arrows {
+        width: 100% !important;
+        left: 0 !important;
+        padding: 0 20px !important;
+    }
+
+    .nav-arrow {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES FOR MOBILE
+   ======================================== */
+
+@media (max-width: 480px) {
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    .mobile-full-width {
+        width: 100% !important;
+        max-width: 100vw !important;
+    }
+
+    .mobile-center {
+        text-align: center !important;
+    }
+
+    .mobile-padding {
+        padding: 15px !important;
+    }
+
+    .mobile-no-padding {
+        padding: 0 !important;
+    }
+}
