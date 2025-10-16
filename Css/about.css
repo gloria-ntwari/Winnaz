@@ -920,17 +920,19 @@ h2 span {
     padding: 40px 80px;
     grid-template-columns: 1fr 450px;
   }
-    .signup-header {
+
+  .signup-header {
     margin-top: -180px;
     font-size: 25px;
   }
 }
-@media (max-width: 1228px){
-      .signup-header {
+
+@media (max-width: 1228px) {
+  .signup-header {
     margin-top: -180px;
     font-size: px;
   }
-  
+
 }
 
 @media (max-width: 1024px) {
@@ -1002,7 +1004,6 @@ h2 span {
   }
 }
 
-
 @media (max-width: 992px) {
   .nav-link {
     gap: 20px;
@@ -1031,6 +1032,7 @@ h2 span {
   .white {
     color: #fff;
   }
+
   .signup-content {
     flex-direction: column;
     padding: 60px 20px;
@@ -1045,7 +1047,8 @@ h2 span {
     font-size: 32px;
     margin-left: 0;
     text-align: center;
-    margin-top: 0;
+    margin-top: 60px;
+    padding-top: 20px;
   }
 
   .signup-container {
@@ -1151,8 +1154,10 @@ h2 span {
 
   .signup-container {
     position: static;
+    padding-bottom: 200px;
     margin: 20px auto;
-    margin-bottom: 100px;
+
+
   }
 
   .signup-container::before {
@@ -1633,12 +1638,21 @@ body {
   .signup-header {
     margin-left: 0 !important;
     padding: 0 15px !important;
+    margin-bottom: 40px !important;
   }
 
   .signup-container {
     width: 100% !important;
     max-width: 350px !important;
-    margin: 20px auto !important;
+    margin: 40px auto !important;
+    position: static !important;
+    right: auto !important;
+    transform: none !important;
+  }
+
+  .signup-container::before,
+  .signup-container::after {
+    display: none !important;
   }
 
   /* Fix footer */

@@ -1184,8 +1184,10 @@ h2 {
 
   .signup-container {
     position: static;
+    padding-bottom: 200px;
     margin: 20px auto;
-    margin-bottom: 100px;
+    
+
   }
 
   .signup-container::before {

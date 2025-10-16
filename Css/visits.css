@@ -1027,6 +1027,7 @@ h2 span {
   .close-icon.show {
     display: block;
   }
+  
 }
 
 @media (max-width: 320px) {
@@ -1046,6 +1047,10 @@ h2 span {
   .signup {
     margin-top: 120px;
   }
+    .signup-header {
+    margin-top: -180px;
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1055,6 +1060,10 @@ h2 span {
 
   .section {
     padding: 40px 15px;
+  }
+    .signup-header {
+    margin-top: -180px;
+    font-size: 25px;
   }
 }
 
@@ -1097,14 +1106,10 @@ h2 span {
     font-size: 36px;
   }
 
-
-  .signup-header {
-    font-size: 40px;
-  }
-
   .white {
     color: #fff;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -1135,8 +1140,10 @@ h2 span {
 
   .signup-container {
     position: static;
+    padding-bottom: 200px;
     margin: 20px auto;
-    margin-bottom: 100px;
+    
+
   }
 
   .signup-container::before {
