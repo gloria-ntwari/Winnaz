@@ -91,6 +91,16 @@
     }
 }
 
+@media (min-width: 1150px) and (max-width: 1215px) {
+    .content-testmonial {
+        margin-top: 180px;
+    }
+
+    .logo-section {
+        margin-top: -50px;
+    }
+}
+
 /* ========================================
    iPhone SPECIFIC FIXES (320px - 420px)
    ======================================== */
@@ -667,6 +677,14 @@
 /* ========================================
    TABLET RESPONSIVENESS (769px - 1024px)
    ======================================== */
+
+@media (max-width: 1024px) {
+      .signup-header {
+    margin-top: -180px;
+    font-size: 25px;
+  }
+    
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
