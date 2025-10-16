@@ -23,13 +23,21 @@
     .main-banner,
     .container,
     .life-section,
-    .partner-section,
-    .signup {
+    .partner-section {
         width: 100% !important;
         max-width: 100vw !important;
         padding-left: 15px !important;
         padding-right: 15px !important;
         margin: 0 !important;
+    }
+
+    /* Keep signup full-bleed */
+    .signup {
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
     }
 }
 
@@ -53,12 +61,18 @@
     .container,
     .life-section,
     .partner-section,
-    .footer,
-    .signup {
+    .footer {
         width: 100% !important;
         max-width: 100vw !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+
+    /* Keep signup full-bleed on narrow desktops */
+    .signup {
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
     }
 
     /* Ensure decorative/logo orbit area doesn't extend past viewport */
@@ -242,7 +256,9 @@
     /* Signup section fixes */
     .signup {
         padding: 15px !important;
-        width: 100% !important;
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
         max-width: 100vw !important;
     }
 
@@ -283,7 +299,9 @@
 
     .footer-bottom {
         padding: 15px !important;
-        width: 100% !important;
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
         max-width: 100vw !important;
         flex-direction: column !important;
         gap: 15px !important;
@@ -669,13 +687,21 @@
     .main-banner,
     .container,
     .life-section,
-    .partner-section,
-    .signup {
+    .partner-section {
         width: 100% !important;
         max-width: 100vw !important;
         padding-left: 30px !important;
         padding-right: 30px !important;
         margin: 0 !important;
+    }
+
+    .signup {
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        max-width: 100vw !important;
     }
 
     /* Navigation fixes for tablet */
@@ -948,7 +974,9 @@
     /* Signup section fixes for tablet */
     .signup {
         padding: 30px !important;
-        width: 100% !important;
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
         max-width: 100vw !important;
     }
 
@@ -992,7 +1020,9 @@
 
     .footer-bottom {
         padding: 30px !important;
-        width: 100% !important;
+        width: 100vw !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
         max-width: 100vw !important;
         flex-direction: row !important;
         gap: 30px !important;
