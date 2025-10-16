@@ -470,11 +470,13 @@ h2 span {
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
+
 }
 
 .logo-section {
   position: relative;
   display: flex;
+  margin-bottom: 30px;
   justify-content: center;
   align-items: center;
 }
@@ -584,7 +586,7 @@ h2 span {
   max-width: 600px;
   position: relative;
   padding: 0 0px;
-  top: 0;
+  margin-top: 170px;
   left: 0;
 }
 
@@ -3276,9 +3278,10 @@ h2 span {
     height: 160px !important;
   }
 }
+
 @media (min-width: 1025px) and (max-width:1150px) {
 
-    .center-logo {
+  .center-logo {
     position: absolute !important;
     top: 60% !important;
     left: 56% !important;
@@ -3289,7 +3292,8 @@ h2 span {
     border-width: 12px !important;
     z-index: 10 !important;
   }
-    .products-circle {
+
+  .products-circle {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -3298,7 +3302,8 @@ h2 span {
     height: 220px !important;
     max-width: 200px !important;
   }
-    .product {
+
+  .product {
     position: absolute !important;
     width: 90px !important;
     top: 60% !important;
@@ -3308,7 +3313,8 @@ h2 span {
     transform-origin: -100px center !important;
     transition: transform 0.3s ease !important;
   }
-    .product:nth-child(1) {
+
+  .product:nth-child(1) {
     transform: rotate(0deg) translateX(170px) rotate(0deg) !important;
   }
 
