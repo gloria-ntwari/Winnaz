@@ -37,13 +37,15 @@
    DESKTOP NARROW FIX (1025px - 1145px)
    Prevent right-side white space/overflow
    ======================================== */
-@media (min-width: 1025px) and (max-width: 1145px) {
+@media (min-width: 1025px) and (max-width: 1215px) {
 
     html,
     body {
         overflow-x: hidden !important;
         width: 100% !important;
         max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     /* Constrain common wrappers to viewport width to avoid overflow */
@@ -65,14 +67,16 @@
         overflow: hidden !important;
     }
 }
+
 @media (min-width: 768px) and (max-widtH:1155px) {
-        .company-info .nav-links {
+    .company-info .nav-links {
         display: flex !important;
         flex-direction: column !important;
         width: 100% !important;
         gap: 12px !important;
     }
 }
+
 /* ========================================
    iPhone SPECIFIC FIXES (320px - 420px)
    ======================================== */
