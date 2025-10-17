@@ -126,7 +126,7 @@ h2 {
   height: 110vh;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('../Assets/home-background.png');
+    url('../Assets/products-bg.png');
   background-size: cover;
   background-position: center;
 }

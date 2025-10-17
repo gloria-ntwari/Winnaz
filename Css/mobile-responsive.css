@@ -78,7 +78,7 @@
     /* Ensure decorative/logo orbit area doesn't extend past viewport */
     .logo-container {
         max-width: 100% !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
     
 }

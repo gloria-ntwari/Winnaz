@@ -508,6 +508,8 @@ h2 span {
 .center-logo img {
   width: 80%;
   height: auto;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 /* The container that holds both the center and the surrounding products */
@@ -1448,6 +1450,25 @@ h2 span {
     font-size: 18px;
     padding: 0 60px;
   }
+
+  .logo-section {
+    overflow: visible !important;
+  }
+
+  .logo-container {
+    overflow: visible !important;
+  }
+
+  .products-circle {
+    overflow: visible !important;
+    z-index: 10;
+  }
+
+  .product {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10;
+  }
 }
 
 /* Small Desktop (MD) */
@@ -1904,6 +1925,15 @@ h2 span {
   .main-nav-links.show {
     display: flex;
   }
+  
+  /* Ensure mobile menu links are clearly visible on dark overlay */
+  .main-nav-links a {
+    color: #ffffff !important;
+  }
+
+  .main-nav-links .active {
+    color: #ffffff !important;
+  }
 }
 
 /* Image Responsiveness */
@@ -1985,9 +2015,17 @@ h2 span {
     flex-direction: column;
   }
 
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .logo-container {
     width: 260px;
     height: 260px;
+    margin: 0 auto;
   }
 
   .center-logo {
@@ -2574,6 +2612,11 @@ h2 span {
     /* moved slightly down for <=992px */
   }
 
+  /* Ensure the "Sign up" heading sits clearly within the black footer section */
+  .signup .signup-header {
+    margin-top: 120px !important;
+  }
+
   .signup-container {
     position: static;
     margin: 20px auto;
@@ -2867,11 +2910,13 @@ h2 span {
 
   /* Center the testimonial grid and its content */
   .content-testmonial {
-    grid-template-columns: 1fr;
-    justify-items: center;
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
     text-align: center;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 10px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 
   .review-section {
@@ -2885,32 +2930,48 @@ h2 span {
     padding: 0 20px;
   }
 
-  /* Keep the logo ring centered */
   .logo-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
   }
 
   .logo-container {
-    width: 260px;
-    height: 260px;
+    width: 260px !important;
+    height: 260px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  /* Force absolute centering of the logo ring on small screens */
+  .content-testmonial .logo-section .logo-container {
+    position: relative !important;
+    left: 35% !important;
+    transform: translateX(-50%) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .center-logo {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 180px;
-    height: 180px;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 180px !important;
+    height: 180px !important;
     border-width: 12px;
   }
 
   /* Product orbit sized tighter to sit closer around the logo */
   .products-circle {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     width: 300px;
     height: 300px;
   }
@@ -3395,6 +3456,8 @@ h2 span {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
+    z-index: 8;
   }
 
   .center-logo {
@@ -3408,7 +3471,8 @@ h2 span {
     border-radius: 50%;
     background-color: #fff;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    z-index: 5;
+    z-index: 9;
+    overflow: visible;
   }
 
   .products-circle {
@@ -3418,6 +3482,9 @@ h2 span {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
+    overflow: visible;
+    /* prevent orbiting products from being clipped */
+    z-index: 10;
   }
 
   .product {
@@ -3429,6 +3496,7 @@ h2 span {
     max-width: 80px !important;
     transform-origin: -175px center !important;
     transition: transform 0.3s ease !important;
+    z-index: 11;
   }
 
   /* Tablet product positioning - close to the yellow circle edge */
@@ -3455,4 +3523,8 @@ h2 span {
   .product:nth-child(6) {
     transform: rotate(300deg) translateX(175px) rotate(-300deg) !important;
   }
+}
+@media (min-width:1215px) and (max-width:1217px) {
+
+  
 }
