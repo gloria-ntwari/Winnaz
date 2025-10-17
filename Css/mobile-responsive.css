@@ -1703,3 +1703,22 @@
         padding: 0 !important;
     }
 }
+@media (min-width: 1024px) and (max-width: 1215px) {
+  .content-testmonial {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 45px;
+    height: 100vh;
+  }
+
+  .logo-container {
+    width: 500px;
+    height: 500px;
+    margin-top: -150px;
+  }
+
+  .center-logo {
+    width: 320px;
+    height: 320px;
+  }
+}
