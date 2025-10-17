@@ -495,7 +495,7 @@ h2 span {
   transform: translate(-50%, -50%);
   width: 360px;
   height: 360px;
-  background-color: white;
+  background-color: #e92728;
   border-radius: 50%;
   border: 20px solid #ffa500;
   display: flex;
@@ -506,10 +506,11 @@ h2 span {
 }
 
 .center-logo img {
-  width: 80%;
-  height: auto;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
 }
 
 /* The container that holds both the center and the surrounding products */
