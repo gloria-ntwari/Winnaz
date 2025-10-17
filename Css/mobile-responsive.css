@@ -92,27 +92,6 @@
     }
 }
 
-@media (min-width: 1150px) and (max-width: 1215px) {
-    .content-testmonial {
-        margin-top: -50px;
-    }
-
-    .logo-section {
-        margin-top: -60px;
-    }
-        .center-logo {
-        width: 220px !important;
-        height: 220px !important;
-        max-width: 220px !important;
-    }
-        .product {
-        width: 45px !important;
-        height: 45px !important;
-        max-width: 45px !important;
-        transform-origin: -90px center !important;
-    }
-
-}
 
 /* ========================================
    iPhone SPECIFIC FIXES (320px - 420px)
@@ -1192,6 +1171,7 @@
 
     .signup-header {
         font-size: 25px;
+        margin-top: 40px;
     }
 
     .white {
@@ -1212,7 +1192,7 @@
         font-size: 25px;
         margin-left: 0;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 40px;
     }
 
     .signup-container {
@@ -1702,23 +1682,4 @@
     .mobile-no-padding {
         padding: 0 !important;
     }
-}
-@media (min-width: 1024px) and (max-width: 1215px) {
-  .content-testmonial {
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    padding: 45px;
-    height: 100vh;
-  }
-
-  .logo-container {
-    width: 500px;
-    height: 500px;
-    margin-top: -150px;
-  }
-
-  .center-logo {
-    width: 320px;
-    height: 320px;
-  }
 }

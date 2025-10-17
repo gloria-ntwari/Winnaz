@@ -2549,6 +2549,7 @@ h2 span {
 
   .signup-header {
     font-size: 25px;
+    margin-top: 60px;
   }
 
   .white {
@@ -2569,7 +2570,8 @@ h2 span {
     font-size: 25px;
     margin-left: 0;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
+    /* moved slightly down for <=992px */
   }
 
   .signup-container {
@@ -2967,7 +2969,7 @@ h2 span {
   }
 
   .signup-header {
-    margin-top: -180px;
+    margin-top: 80px;
     font-size: 25px;
   }
 
@@ -3374,70 +3376,82 @@ h2 span {
   }
 }
 
-@media (min-width: 1025px) and (max-width:1150px) {
-  .review-section {
-    max-width: 100%;
+@media (min-width:1024px) and (max-width:1215px) {
+
+  /* Make testimonial section match sub-1024 look and keep the ring centered */
+  .content-testmonial {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 45px;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-container {
+    width: 500px;
+    height: 500px;
     position: relative;
-    padding: 0 0px;
-    margin-top: 170px;
-    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .center-logo {
-    position: absolute !important;
-    top: 60% !important;
-    left: 56% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 250px !important;
-    height: 250px !important;
-    max-width: 250px !important;
-    border-width: 12px !important;
-    z-index: 10 !important;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    border: 20px solid #ffa500;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 5;
   }
 
   .products-circle {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 220px !important;
-    height: 220px !important;
-    max-width: 200px !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
   }
 
-  .product {
-    position: absolute !important;
-    width: 90px !important;
-    top: 60% !important;
-    left: 50% !important;
-    height: 100px !important;
-    max-width: 60px !important;
-    transform-origin: -100px center !important;
-    transition: transform 0.3s ease !important;
-  }
+    .product {
+        position: absolute !important;
+        width: 80px !important;
+        top: 65% !important;
+        left: 50% !important;
+        height: 80px !important;
+        max-width: 80px !important;
+        transform-origin: -175px center !important;
+        transition: transform 0.3s ease !important;
+    }
+    /* Tablet product positioning - close to the yellow circle edge */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(175px) rotate(0deg) !important;
+    }
 
-  .product:nth-child(1) {
-    transform: rotate(0deg) translateX(170px) rotate(0deg) !important;
-  }
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(175px) rotate(-60deg) !important;
+    }
 
-  .product:nth-child(2) {
-    transform: rotate(60deg) translateX(150px) rotate(-60deg) !important;
-  }
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(205px) rotate(-120deg) !important;
+    }
 
-  .product:nth-child(3) {
-    transform: rotate(120deg) translateX(150px) rotate(-120deg) !important;
-  }
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(235px) rotate(-180deg) !important;
+    }
 
-  .product:nth-child(4) {
-    transform: rotate(180deg) translateX(150px) rotate(-180deg) !important;
-  }
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(215px) rotate(-240deg) !important;
+    }
 
-  .product:nth-child(5) {
-    transform: rotate(240deg) translateX(170px) rotate(-240deg) !important;
-  }
-
-  .product:nth-child(6) {
-    transform: rotate(300deg) translateX(170px) rotate(-300deg) !important;
-  }
-
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(175px) rotate(-300deg) !important;
+    }
 }
