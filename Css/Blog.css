@@ -72,15 +72,16 @@ h2 span {
 }
 
 .main-hero {
-  padding-top: 10rem;
-  padding-bottom: 5rem;
+  padding-top: 15rem;
+  padding-bottom: 10rem;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Assets/childrens.jpeg');
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../Assets/childrens.jpeg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   color: white;
   display: flex;
   align-items: center;
+
 }
 
 .main-hero::before {
@@ -88,6 +89,8 @@ h2 span {
   position: absolute;
   inset: 0;
   background: url(../Assets/Hero-umugogo.png);
+  opacity: 0.12;
+  /* reduce pattern intensity so children image is clearer */
 }
 
 
@@ -755,56 +758,59 @@ h2 span {
     max-width: 900px;
     padding: 20px 0;
   }
+
   @media (max-width: 1024px) {
-  .hero-title {
-    font-size: 3em;
-  }
+    .hero-title {
+      font-size: 3em;
+    }
 
-  .story-content,
-  .team-section {
-    flex-direction: column;
-  }
+    .story-content,
+    .team-section {
+      flex-direction: column;
+    }
 
-  .image-stack,
-  .team-images {
-    min-height: 350px;
-  }
+    .image-stack,
+    .team-images {
+      min-height: 350px;
+    }
 
-  .team-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+    .team-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-  .partners-grid {
-    gap: 50px;
-  }
+    .partners-grid {
+      gap: 50px;
+    }
 
-  .impact-section {
-    grid-template-columns: 1fr;
-    padding: 40px 60px;
-  }
+    .impact-section {
+      grid-template-columns: 1fr;
+      padding: 40px 60px;
+    }
 
-  .impact-image {
-    position: static;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
+    .impact-image {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-  .impact-image img {
-    width: 100%;
-    height: auto;
+    .impact-image img {
+      width: 100%;
+      height: auto;
+    }
   }
-}
 }
 
 @media (max-width: 900px) {
   .main-nav-links {
     display: none;
   }
-    .signup-header {
+
+  .signup-header {
     margin-top: -180px;
     font-size: 25px;
   }
+
   .recent-post-item {
     grid-template-columns: 1fr 1fr;
   }
@@ -1092,6 +1098,7 @@ h2 span {
   .white {
     color: #fff;
   }
+
   .signup-content {
     flex-direction: column;
     padding: 60px 20px;
@@ -1146,6 +1153,7 @@ h2 span {
     margin-left: 0;
   }
 }
+
 @media (max-width: 768px) {
   .signup-content {
     flex-direction: column;

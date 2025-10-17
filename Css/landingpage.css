@@ -3420,38 +3420,39 @@ h2 span {
     height: 600px;
   }
 
-    .product {
-        position: absolute !important;
-        width: 80px !important;
-        top: 65% !important;
-        left: 50% !important;
-        height: 80px !important;
-        max-width: 80px !important;
-        transform-origin: -175px center !important;
-        transition: transform 0.3s ease !important;
-    }
-    /* Tablet product positioning - close to the yellow circle edge */
-    .product:nth-child(1) {
-        transform: rotate(0deg) translateX(175px) rotate(0deg) !important;
-    }
+  .product {
+    position: absolute !important;
+    width: 80px !important;
+    top: 65% !important;
+    left: 50% !important;
+    height: 80px !important;
+    max-width: 80px !important;
+    transform-origin: -175px center !important;
+    transition: transform 0.3s ease !important;
+  }
 
-    .product:nth-child(2) {
-        transform: rotate(60deg) translateX(175px) rotate(-60deg) !important;
-    }
+  /* Tablet product positioning - close to the yellow circle edge */
+  .product:nth-child(1) {
+    transform: rotate(0deg) translateX(175px) rotate(0deg) !important;
+  }
 
-    .product:nth-child(3) {
-        transform: rotate(120deg) translateX(205px) rotate(-120deg) !important;
-    }
+  .product:nth-child(2) {
+    transform: rotate(60deg) translateX(175px) rotate(-60deg) !important;
+  }
 
-    .product:nth-child(4) {
-        transform: rotate(180deg) translateX(235px) rotate(-180deg) !important;
-    }
+  .product:nth-child(3) {
+    transform: rotate(120deg) translateX(205px) rotate(-120deg) !important;
+  }
 
-    .product:nth-child(5) {
-        transform: rotate(240deg) translateX(215px) rotate(-240deg) !important;
-    }
+  .product:nth-child(4) {
+    transform: rotate(180deg) translateX(235px) rotate(-180deg) !important;
+  }
 
-    .product:nth-child(6) {
-        transform: rotate(300deg) translateX(175px) rotate(-300deg) !important;
-    }
+  .product:nth-child(5) {
+    transform: rotate(240deg) translateX(215px) rotate(-240deg) !important;
+  }
+
+  .product:nth-child(6) {
+    transform: rotate(300deg) translateX(175px) rotate(-300deg) !important;
+  }
 }
