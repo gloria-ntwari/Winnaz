@@ -581,6 +581,35 @@ h2 span {
   transition: transform 0.3s ease;
 }
 
+  /* Subtle floating animation for mobile products */
+  .product img {
+    animation: mobileFloat 4s ease-in-out infinite !important;
+  }
+
+  .product:nth-child(1) img {
+    animation-delay: 0s !important;
+  }
+
+  .product:nth-child(2) img {
+    animation-delay: 0.5s !important;
+  }
+
+  .product:nth-child(3) img {
+    animation-delay: 1s !important;
+  }
+
+  .product:nth-child(4) img {
+    animation-delay: 1.5s !important;
+  }
+
+  .product:nth-child(5) img {
+    animation-delay: 2s !important;
+  }
+
+  .product:nth-child(6) img {
+    animation-delay: 2.5s !important;
+  }
+
 .product:hover img {
   transform: scale(1.1);
 }
@@ -1926,7 +1955,7 @@ h2 span {
   .main-nav-links.show {
     display: flex;
   }
-  
+
   /* Ensure mobile menu links are clearly visible on dark overlay */
   .main-nav-links a {
     color: #ffffff !important;
@@ -2438,6 +2467,59 @@ h2 span {
 
   .nav-arrow {
     font-size: 1.5rem;
+  }
+}
+
+/* iPhone XR and similar devices - minimize white space */
+@media (min-width: 390px) and (max-width: 430px) {
+  .main-banner {
+    min-height: 110vh !important;
+    margin-bottom: -70px !important;
+  }
+
+  .hero-image {
+    height: 380px !important;
+    margin-bottom: -70px !important;
+  }
+
+  .container {
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  .logo-section {
+    left: -5%
+  }
+
+  .review-section {
+    min-height: 20vh;
+
+  }
+}
+
+
+@media (min-width: 430px) and (max-width: 430px) {
+  .main-banner {
+    min-height: 90vh !important;
+    margin-bottom: -70px !important;
+  }
+
+  .hero-background {
+    height: 300px !important;
+    margin-bottom: -70px !important;
+  }
+
+  .container {
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  .logo-section {
+    left: -5%
+  }
+
+  .review-section {
+    min-height: 20vh;
   }
 }
 
@@ -3525,7 +3607,5 @@ h2 span {
     transform: rotate(300deg) translateX(175px) rotate(-300deg) !important;
   }
 }
-@media (min-width:1215px) and (max-width:1217px) {
 
-  
-}
+@media (min-width:1215px) and (max-width:1217px) {}
