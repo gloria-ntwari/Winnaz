@@ -1104,9 +1104,8 @@ h2 span {
 
 .social-icons {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  left: 0;
-  margin-left: 100px;
 }
 
 .social-icons a {
@@ -1115,9 +1114,13 @@ h2 span {
   background: #ee1d23;
   font-size: 20px;
   width: 30px;
-  height: 25px;
-  padding: 0 5px;
-  border-radius: 5px;
+  height: 30px;
+  padding: 0;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .legal-links {
