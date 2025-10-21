@@ -3610,4 +3610,25 @@ h2 span {
   }
 }
 
+@media (width: 1215px) {
+  /* Nudge the center logo and orbit circle upward only at 1215px */
+  .center-logo {
+    position: absolute;
+    top: 270%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    border: 20px solid #ffa500;
+    border-radius: 50%;
+    background-color: #e92728;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    z-index: 9;
+    overflow: visible;
+  }
+  
+  .products-circle {
+    top: 47% !important;
+  }
+}
 @media (min-width:1215px) and (max-width:1217px) {}
