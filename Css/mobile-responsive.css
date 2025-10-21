@@ -678,6 +678,7 @@
 
 }
 
+
 @media (min-width: 769px) and (max-width: 1024px) {
 
     /* Global tablet fixes */
@@ -1377,7 +1378,7 @@
 
     .center-logo {
         position: absolute !important;
-        top: 50% !important;
+        top: 60% !important;
         left: 50% !important;
         transform: translate(-50%, -50%) !important;
         width: 220px !important;
@@ -1414,11 +1415,11 @@
     }
 
     .product:nth-child(2) {
-        transform: rotate(60deg) translateX(150px) rotate(-60deg) !important;
+        transform: rotate(60deg) translateX(180px) rotate(-60deg) !important;
     }
 
     .product:nth-child(3) {
-        transform: rotate(120deg) translateX(150px) rotate(-120deg) !important;
+        transform: rotate(120deg) translateX(180px) rotate(-120deg) !important;
     }
 
     .product:nth-child(4) {
@@ -1654,6 +1655,66 @@
         flex-direction: column !important;
         width: 100% !important;
         gap: 12px !important;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 900px){
+        .center-logo {
+        position: absolute !important;
+        top: 70% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 220px !important;
+        border-width: 14px !important;
+        z-index: 10 !important;
+    }
+
+    /* Medium tablet product orbit - smaller radius for medium tablet screens */
+    .products-circle {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 300px !important;
+        height: 300px !important;
+        max-width: 300px !important;
+    }
+
+    .product {
+        position: absolute !important;
+        width: 70px !important;
+        height: 70px !important;
+        left: 40% !important;
+        max-width: 70px !important;
+        transform-origin: -150px center !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    /* Medium tablet product positioning - close to the yellow circle edge */
+    .product:nth-child(1) {
+        transform: rotate(0deg) translateX(150px) rotate(0deg) !important;
+    }
+
+    .product:nth-child(2) {
+        transform: rotate(60deg) translateX(180px) rotate(-60deg) !important;
+    }
+
+    .product:nth-child(3) {
+        transform: rotate(120deg) translateX(180px) rotate(-120deg) !important;
+    }
+
+    .product:nth-child(4) {
+        transform: rotate(180deg) translateX(150px) rotate(-180deg) !important;
+    }
+
+    .product:nth-child(5) {
+        transform: rotate(240deg) translateX(150px) rotate(-240deg) !important;
+    }
+
+    .product:nth-child(6) {
+        transform: rotate(300deg) translateX(150px) rotate(-300deg) !important;
     }
 }
 

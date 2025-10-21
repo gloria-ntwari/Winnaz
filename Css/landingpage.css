@@ -3555,7 +3555,7 @@ h2 span {
     height: 320px;
     border: 20px solid #ffa500;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #e92728;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     z-index: 9;
     overflow: visible;
@@ -3569,7 +3569,6 @@ h2 span {
     width: 600px;
     height: 600px;
     overflow: visible;
-    /* prevent orbiting products from being clipped */
     z-index: 10;
   }
 
