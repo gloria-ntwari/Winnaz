@@ -121,12 +121,13 @@ h2 {
 
 /* Hero Section */
 .hero {
-  padding: 100px 0 100px;
+
   position: relative;
-  height: 110vh;
+  height: 120vh;
+  width: auto;
   overflow: hidden;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('../Assets/products-bg.png');
+    url('../Assets/WhatsApp_Image_2025-10-20_at_3.22.04_PM-removebg-preview.png');
   background-size: cover;
   background-position: center;
 }

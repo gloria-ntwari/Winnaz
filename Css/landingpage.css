@@ -677,7 +677,7 @@ h2 span {
 
 .quote-right {
   right: -20px;
-  bottom: -40px;
+  bottom: -140px;
 }
 
 .testimonial-author {
@@ -703,6 +703,10 @@ h2 span {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 5px;
+
+}
+.author-info{
+   margin-left: 25px;
 }
 
 .author-info .author-title {
@@ -714,6 +718,7 @@ h2 span {
   gap: 8px;
   margin-top: 30px;
   justify-content: center;
+  margin-left: -30px;
 }
 
 .nav-dot {
@@ -732,11 +737,15 @@ h2 span {
   position: absolute;
   top: 50%;
   width: calc(100% + 60px);
-  left: -30px;
+  left: 80px;
   transform: translateY(-50%);
   display: flex;
   justify-content: space-between;
   pointer-events: none;
+}
+
+.nav-arrow.next {
+  margin-right: 130px;
 }
 
 .nav-arrow {
